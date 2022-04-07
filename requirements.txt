@@ -1,0 +1,5 @@
+cryptography~=36.0.1
+openpyxl~=3.0.9
+PyYAML~=6.0
+requests~=2.27.1
+selenium~=4.1.0

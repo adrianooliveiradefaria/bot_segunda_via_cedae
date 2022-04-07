@@ -1,0 +1,32 @@
+# Chave de criptografia para senha do SMTP
+secret.key
+
+AGUA.xlsx
+escopo.txt
+
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Flask stuff:
+instance/
+.webassets-cache
+
+# Environments
+.venv/
+.venv.bak/
+venv/
+venv.bak/
+
+# mypy
+.mypy_cache/
+.dmypy.json
+dmypy.json
+
+# vscode
+.vscode/
+.vscode/settings.json
+
+# Teste
+teste/

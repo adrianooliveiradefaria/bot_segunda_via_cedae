@@ -1,0 +1,9 @@
+# Bibliotecas de produção
+-r requirements.txt
+
+# Bibliotecas de desenvolvimento
+autopep8
+isort
+pyinstaller
+pytest
+mkdocs
