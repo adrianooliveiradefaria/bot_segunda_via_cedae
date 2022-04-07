@@ -1,7 +1,7 @@
 # Chave de criptografia para senha do SMTP
 secret.key
 
-AGUA.xlsx
+#AGUA.xlsx
 escopo.txt
 
 # Byte-compiled / optimized / DLL files
