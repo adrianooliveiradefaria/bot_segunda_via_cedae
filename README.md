@@ -17,13 +17,13 @@
     - Editor de arquivos xlsx para alterar a planilha fonte de dados
     - Arquivo AGUA.xlsx com os dados de acesso dos clientes
     - [WebDriver](https://chromedriver.chromium.org/downloads) compatível com sua versão do Google Chrome
-    - WebDriver nomeado como chromedriver_linux
+    - WebDriver descompatado na raiz do diretório da aplicação e renomeado como chromedriver_linux
 
 ## Como rodar a aplicação
-    - Instalar as dependências
+    1. Instalar as dependências
         pip install -r requirements.txt
-    - No diretório da aplicação executar o arquivo
-        python (ou python3) agua.py 
+    2. No diretório da aplicação executar o arquivo agua.py
+        python3 agua.py 
     
 ## Desenvolvedor
     Adriano Faria
