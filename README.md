@@ -20,7 +20,10 @@
     - WebDriver nomeado como chromedriver_linux
 
 ## Como rodar a aplicação
-    python agua.py
+    - Instalar as dependências
+        pip install -r requirements.txt
+    - No diretório da aplicação executar o arquivo
+        python (ou python3) agua.py 
     
 ## Desenvolvedor
     Adriano Faria
