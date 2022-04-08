@@ -20,12 +20,13 @@
     - WebDriver descompatado na raiz do diretório da aplicação e renomeado como chromedriver_linux
 
 ## Como rodar a aplicação
-    1. Instale as dependências
+    1. Cerfique-se de estar no diretório onde a aplicação foi descompactada
+    2. Instale as dependências
         pip install -r requirements.txt
-    2. Gere sua pŕopria chave criptográfica privada
-    3. Criptografe seus dados de usuário e senha para envio de e-mail
-    4. Configure o SMTP para envio dos PDFs por e-mail
-    5. Execute no diretório da aplicação
+    3. Gere sua pŕopria chave criptográfica privada
+    4. Criptografe seus dados de usuário e senha para envio de e-mail
+    5. Configure o SMTP para envio dos PDFs por e-mail
+    6. Execute no diretório da aplicação
         python3 agua.py
     
 ## Desenvolvedor
