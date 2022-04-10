@@ -1,4 +1,6 @@
 import os
+import sys
+from argparse import ArgumentParser
 from datetime import datetime
 from platform import system
 from random import uniform
@@ -384,11 +386,57 @@ class BotAguaSegundaVia(object):
         )
 
 
+parser = ArgumentParser(
+    usage='python agua.py [args]'
+)
+parser.add_argument(
+    '--config_pk',
+    action='store_true',
+    help='Cria uma chave privada para criptografia do sistema.'
+)
+parser.add_argument(
+    '--config_smtp',
+    action='store_true',
+    help='Chama o configurador do servidor SMTP para envio de e-mail.'
+)
+
+args = parser.parse_args()
+
+
 if __name__ == '__main__':
+    if args.config_pk:
+        logger.info('Gerando chave criptográfica privada, aguarde...')
+        if Criptografia().gerar_chave_cripto():
+            logger.info(
+                '''Chave gerada com sucesso!
+                Agora é preciso configurar os dados do SMTP para o envio de e-mail.
+                Execute python agua.py --config_smtp''')
+            sys.exit(0)
+    elif args.config_smtp:
+        print(
+            '''
+        ------------------------------
+        Configuração do servidor SMTP
+        ------------------------------
+        
+        Informe os dados do seu servidor de envio de e-mail.
+        Execute este processo devagar para não ter problemas com envio.
+
+        ''')
+        host = input('HOST (ex: smtp.gamail.com): ')
+        porta = input('PORTA (ex: 465): ')
+        usuario = input('USUÁRIO (ex: seu_usuario@gmail.com): ')
+        senha = input('SENHA (esta informação será criptografada): ')
+        senha_confirmacao = input('CONFIRME A SENHA: ')
+        confirma = input('Confirma dos dados fornecidos? ')
+        if confirma:
+            ...
+        else:
+            sys.exit(0)
     bot_segunda_via = BotAguaSegundaVia()
     if bot_segunda_via.baixar_segunda_via(
             'https://seguro.cedae.com.br/segunda_via_web/pages/SegundaVia/ENTRADA.aspx'):
-        print('*** Envio das contas concluído com sucesso ;)')
+        logger.info('*** Envio das contas concluído com sucesso ;)')
     else:
-        print(
+        logger.info(
             'FALHA na rotina de envio das contas... Entre em contato com o suporte técnico :(')

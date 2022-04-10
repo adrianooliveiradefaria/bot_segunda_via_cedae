@@ -4,6 +4,9 @@ from typing import List
 
 import yaml
 
+from lib.log import logger
+
+
 ARQUIVO_YAML = Path('controle/matricula_processada.yaml')
 
 
@@ -49,7 +52,7 @@ def __criar_processada() -> None:
                 sort_keys=False
             )
         except yaml.YAMLError as erro:
-            print(
+            logger.error(
                 f'Erro na criação do arquivo de controle de matrículas processadas. {erro}')
     return
 
@@ -69,13 +72,13 @@ def inserir_processada(matricula: str, cliente: str, documento: str) -> None:
         try:
             conteudo = yaml.safe_load(arq_controle)
         except yaml.YAMLError as erro:
-            print(f'Erro ao abrir o arquivo {arq_controle}: {erro}')
+            logger.error(f'Erro ao abrir o arquivo {arq_controle}: {erro}')
         else:
             # Novo dicionário à adicionar
             novo = {
-                'matricula': matricula,  # '7234319002-4',
-                'cliente': cliente,  # 'FUNCAO ADICIONAR',
-                'documento': documento,  # '554.521.555-10',
+                'matricula': matricula,
+                'cliente': cliente,
+                'documento': documento,
                 'execucao': datetime.today(),
             }
             # Adiciona o novo dicionário na lista de valores do controle
@@ -94,7 +97,7 @@ def inserir_processada(matricula: str, cliente: str, documento: str) -> None:
                 sort_keys=False
             )
         except yaml.YAMLError as erro:
-            print(f'Erro ao gravar o arquivo atualizado! {erro}')
+            logger.error(f'Erro ao gravar o arquivo atualizado! {erro}')
     return
 
 
@@ -111,7 +114,7 @@ def retornar_processada() -> List[str]:
         try:
             controle = yaml.safe_load(arq_controle)
         except yaml.YAMLError as erro:
-            print(f'Erro ao abrir o arquivo {arq_controle}: {erro}')
+            logger.error(f'Erro ao abrir o arquivo {arq_controle}: {erro}')
         else:
             for valores in controle.values():
                 controle_executados: list = [

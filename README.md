@@ -11,6 +11,8 @@
 ## Tecnologias utilizadas
    - Python
    - Sellenium
+   - autopep8
+   - isort
 
 ## Pŕe-requisitos
    - Python 3
@@ -22,12 +24,15 @@
 ## Como rodar a aplicação
  1. Cerfique-se de estar no diretório onde a aplicação foi descompactada
  2. Instale as dependências
-    pip install -r requirements.txt
- 3. Gere sua pŕopria chave criptográfica privada
+   pip install -r requirements.txt
+ 3. Gere sua pŕopria chave criptográfica privada com o comando
+   python agua.py --conf-pk
+ 4. Configure os parâmetro de envio de e-mail
+   python agua.py --conf-smtp
  4. Criptografe seus dados de usuário e senha para envio de e-mail
  5. Configure o SMTP para envio dos PDFs por e-mail
  6. Execute no diretório da aplicação
-    python3 agua.py
+   python3 agua.py
     
 ## Desenvolvedor
    Adriano Faria

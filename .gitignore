@@ -3,6 +3,9 @@ secret.key
 
 AGUA.xlsx
 escopo.txt
+#ToDo.txt
+log/*
+controle/matricula_processada.yaml
 
 # Byte-compiled / optimized / DLL files
 __pycache__/
@@ -28,5 +31,3 @@ dmypy.json
 .vscode/
 .vscode/settings.json
 
-# Teste
-teste/

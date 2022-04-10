@@ -1,5 +1,4 @@
 from pathlib import Path
-from textwrap import dedent
 from typing import Dict
 
 import requests
@@ -67,8 +66,9 @@ class ArquivoConfig(object):
 
     def __verificar_arquivo(self) -> str:
         path_config = Path.cwd().joinpath('config')
+
         try:
-            if Path(path_config).exists() \
+            if Path(self.path_config).exists() \
                     and Path(path_config.joinpath(self.__arquivo)).exists():
                 return path_config.joinpath(self.__arquivo)
             else:
@@ -79,10 +79,36 @@ class ArquivoConfig(object):
                 f'Falha ao acessar o arquivo de configuração: {caminho}. Erro: FileNotFoundError.')
             return ''
 
-    def gravar_arquivo(self):
-        ...
+    def gravar_arquivo(self, conteudo: dict) -> bool:
+        """
+        Grava o conteúdo informado no arquivo (YAML) da instância de ArquivoConfig().
+        :args
+            {conteudo} [dict] - Dicionário com o conteúdo do arquivo.
+        :returns
+            True/False.
+        """
+        with open(self.arquivo, 'w') as arq_conf:
+            try:
+                yaml.dump(
+                    conteudo,
+                    arq_conf,
+                    default_flow_style=False,
+                    explicit_start=True,
+                    explicit_end=True,
+                    version=(1, 2),
+                    sort_keys=False
+                )
+            except yaml.YAMLError as erro:
+                logger.error(
+                    f'Erro na criação do arquivo de controle de matrículas processadas. {erro}')
+        return
 
     def carregar_arquivo(self) -> Dict[str, str]:
+        """
+        Carrega o arquivo (YAML) da instância de ArquivoConfig().
+        :returns
+            Dicionário com o conteúdo do arquivo ou vazio em caso de erro.
+        """
         try:
             with open(self.arquivo) as f:
                 conteudo = yaml.safe_load(f)
