@@ -16,6 +16,7 @@ from selenium.webdriver.support import expected_conditions as EC
 from selenium.webdriver.support.select import Select
 from selenium.webdriver.support.ui import WebDriverWait
 
+from lib.ambiente_inicial import config_smtp
 from controle.matricula_processada import inserir_processada
 from lib.elemento_web import ArquivoDownload, BuscarElementos
 from lib.envio_email import Email
@@ -413,26 +414,8 @@ if __name__ == '__main__':
                 Execute python agua.py --config_smtp''')
             sys.exit(0)
     elif args.config_smtp:
-        print(
-            '''
-        ------------------------------
-        Configuração do servidor SMTP
-        ------------------------------
-        
-        Informe os dados do seu servidor de envio de e-mail.
-        Execute este processo devagar para não ter problemas com envio.
-
-        ''')
-        host = input('HOST (ex: smtp.gamail.com): ')
-        porta = input('PORTA (ex: 465): ')
-        usuario = input('USUÁRIO (ex: seu_usuario@gmail.com): ')
-        senha = input('SENHA (esta informação será criptografada): ')
-        senha_confirmacao = input('CONFIRME A SENHA: ')
-        confirma = input('Confirma dos dados fornecidos? ')
-        if confirma:
-            ...
-        else:
-            sys.exit(0)
+        config_smtp()
+        sys.exit(0)
     bot_segunda_via = BotAguaSegundaVia()
     if bot_segunda_via.baixar_segunda_via(
             'https://seguro.cedae.com.br/segunda_via_web/pages/SegundaVia/ENTRADA.aspx'):

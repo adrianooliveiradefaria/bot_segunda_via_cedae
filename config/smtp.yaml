@@ -1,4 +1,7 @@
+%YAML 1.2
+---
 host: wp200.hostgator.com.br
 porta: 465
 usuario: robo@conectasolucoes.com.br
-senha: gAAAAABh_wFivnDik_c1lBdZ1K4RcUwHcUTxpFECpPxzuCfmgi-VZQYkbH66kjlFrHMx2xvWpzozEDwRmceu-onQHVH6k7JwOg==
+senha: gAAAAABiUws3ynATSSjm3nwARFxm9_j_WY9xq25sP9Elf1xOvjirtXjHsQ85m_yzBpolI54SxC73iwuEU-XiHIaLj_n5N2K6LQ==
+...

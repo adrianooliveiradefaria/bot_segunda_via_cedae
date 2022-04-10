@@ -52,11 +52,12 @@ class ArquivoConfig(object):
         """
         Classe para manipulação de um arquivo de configuração no padrão YAML.
         :args
-            {arquivo} - Nome do arquivo à manipular. O diretório padrão é config.
+            {arquivo} - Nome do arquivo à manipular (o diretório padrão é /config).
         :returns
             Nenhum.
         :methods
-            Nenhum.
+            gravar_arquivo()
+            carregar_arquivo()
         """
         self.__arquivo = arquivo
 
@@ -68,7 +69,7 @@ class ArquivoConfig(object):
         path_config = Path.cwd().joinpath('config')
 
         try:
-            if Path(self.path_config).exists() \
+            if Path(path_config).exists() \
                     and Path(path_config.joinpath(self.__arquivo)).exists():
                 return path_config.joinpath(self.__arquivo)
             else:
@@ -98,10 +99,11 @@ class ArquivoConfig(object):
                     version=(1, 2),
                     sort_keys=False
                 )
+                return True
             except yaml.YAMLError as erro:
-                logger.error(
-                    f'Erro na criação do arquivo de controle de matrículas processadas. {erro}')
-        return
+                logger.critical(
+                    f'Erro ao gravar o arquivo YAML de configuração/controle. {erro}')
+                return False
 
     def carregar_arquivo(self) -> Dict[str, str]:
         """
