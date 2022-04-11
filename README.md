@@ -2,8 +2,12 @@
     
 ## Descrição do Projeto
 O robô viabiliza a automação do recebimento da segunda via da conta da Companhia Estadual de Água e Esgoto (CEDAE), que tem o péssimo costume de entregar faturas com até 3 meses de antecedência, o que resulta num alto custo (tempo e dinheiro) para gerenciamento (agendamento) ou esquecimento do pagamento (sumiço depois de meses da entrega).
+
 A fonte de dados para ingresso no site da companhia e extração dos vencimentos está contida na planilha **AGUA.xlsx**. 
+
 Após minerar a tabela de vencimentos, são extraídos somente os do mês corrente, e o e-mail cadastrado recebe a segunda via em formato PDF, para impressão e arquivamento, ou pagamento por aplicativos de bancos, que já reconhecem boletos neste formato - versões futuras preveem o envio direto para um aplicativo mensageiro, o que facilitará o pagamento direto do celular.
+
+Como há um controle das matrículas já processadas no mês, o robô pode ser agendado para rodar duas ou mais vezes no mês para a verificação dos vencimentos sem gerar duplicidade. Confira a conclusão...
 
 ## Status do Projeto
    Em desenvolvimento.
@@ -43,3 +47,4 @@ Após minerar a tabela de vencimentos, são extraídos somente os do mês corren
    GNU
 
 ## Conclusão
+Este robô tem um relevante papel no ganho de mão de obra em administradoras de imóveis, onde dezenas ou centenas de contas precisam ser gerenciadas e/ou solicitadas a companhia pessoalmente, todo mês, pelos mais diversos motivos. Utilize e seja feliz. ;)
