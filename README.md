@@ -22,17 +22,17 @@
    - WebDriver descompatado na raiz do diretório da aplicação e renomeado como chromedriver_linux
 
 ## Como rodar a aplicação
-1. Cerfique-se de estar no diretório onde a aplicação foi descompactada
-2. Instale as dependências
-   pip install -r requirements.txt
-3. Gere sua pŕopria chave criptográfica privada com o comando
-   python agua.py --config_pk
-4. Configure o SMTP para envio dos PDFs por e-mail
-   python agua.py --config_smtp
-5. Edite a planilha AGUA.xlsx e cadastre os dados das contas que deseja
-   Siga o modelo informado de exemplo.
-6. Execute no diretório da aplicação
-   python3 agua.py
+   1. Cerfique-se de estar no diretório onde a aplicação foi descompactada
+   2. Instale as dependências
+        pip install -r requirements.txt
+   3. Gere sua pŕopria chave criptográfica privada com o comando
+        python agua.py --config_pk
+   4. Configure o SMTP para envio dos PDFs por e-mail
+        python agua.py --config_smtp
+   5. Edite a planilha AGUA.xlsx e cadastre os dados das contas que deseja
+        Siga o modelo informado de exemplo.
+   6. Execute no diretório da aplicação
+        python3 agua.py
     
 ## Desenvolvedor
    Adriano Faria
