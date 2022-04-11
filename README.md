@@ -23,7 +23,7 @@
 
 ## Como rodar a aplicação
 Faça isso:
-   `python agua.py`
+   <p>`python agua.py`</p>
    1. Cerfique-se de estar no diretório onde a aplicação foi descompactada
    2. Instale as dependências
       `pip install -r requirements.txt`
