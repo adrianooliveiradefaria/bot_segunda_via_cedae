@@ -15,7 +15,7 @@ Como há um controle das matrículas já processadas no mês, o robô pode ser a
 ## Funcionalidades
     
 ## Tecnologias utilizadas
-   - Python 3
+   - Python
    - OpenPyXL
    - Selenium
 
