@@ -34,8 +34,7 @@ Como há um controle das matrículas já processadas no mês, o robô pode ser a
       `python agua.py --config_pk`
    4. Configure o SMTP para envio dos PDFs por e-mail
       `python agua.py --config_smtp`
-   5. Edite a planilha **AGUA.xlsx** e cadastre os dados das contas que deseja
-      Siga o modelo informado de exemplo.
+   5. Edite a planilha **AGUA.xlsx** e cadastre os dados das contas que deseja, seguindo exatamente o modelo informado de exemplo, inclusive traços e pontos.
    6. Execute no diretório da aplicação
       `python3 agua.py`
     
