@@ -20,7 +20,9 @@ Como há um controle das matrículas já processadas no mês, o robô pode ser a
    - Selenium
 
 ## Pŕe-requisitos
-   - Python 3
+   - Python 3.7
+   - Windows (32bit/64bit)
+   - GNU/Linux (32bit/64bit)
    - Editor de arquivos xlsx para alterar a planilha fonte de dados
    - Arquivo **AGUA.xlsx** com os dados de acesso dos clientes
    - [WebDriver](https://chromedriver.chromium.org/downloads) compatível com sua versão do Google Chrome
