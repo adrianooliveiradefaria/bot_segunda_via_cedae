@@ -25,7 +25,7 @@ Como há um controle das matrículas já processadas no mês, o robô pode ser a
    - GNU/Linux (32bit/64bit)
    - Editor de arquivos xlsx para alterar a planilha fonte de dados
    - Arquivo **AGUA.xlsx** com os dados de acesso dos clientes
-   - [WebDriver](https://chromedriver.chromium.org/downloads) compatível com sua versão do Google Chrome
+   - [WebDriver](https://chromedriver.chromium.org/downloads) compatível com sua versão do Google Chrome. Para saber sua versão, abra o Google Chrome e digite na barra de endereço *chrome://settings/help*
    - WebDriver descompatado na raiz do diretório da aplicação e renomeado como chromedriver_linux ou chromedriver_win.exe (para Windows)
 
 ## Como rodar a aplicação
