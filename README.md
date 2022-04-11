@@ -1,7 +1,9 @@
 # Bot 2a Via de Conta D'Água
     
 ## Descrição do Projeto
-O robô acessa a página da Companhia Estadual de Água e Esgoto (CEDAE), e utiliza-se dos dados contidos na planilha AGUA.xlsx para ingressar no site e extrair a segunda via de todos os vencimentos do mês corrente. Em seguida envia estes vencimentos no formato PDF por e-mail.
+O robô viabiliza a automação do recebimento da segunda via da conta da Companhia Estadual de Água e Esgoto (CEDAE), que tem o péssimo costume de entregar faturas com até 3 meses de antecedência, o que resulta num alto custo (tempo e dinheiro) para gerenciamento (agendamento) ou esquecimento do pagamento (sumiço depois de meses da entrega).
+A fonte de dados para ingresso no site da companhia e extração dos vencimentos está contida na planilha **AGUA.xlsx**. 
+Após minerar a tabela de vencimentos, são extraídos somente os do mês corrente, e o e-mail cadastrado recebe a segunda via em formato PDF, para impressão e arquivamento, ou pagamento por aplicativos de bancos, que já reconhecem boletos neste formato - versões futuras preveem o envio direto para um aplicativo mensageiro, o que facilitará o pagamento direto do celular.
 
 ## Status do Projeto
    Em desenvolvimento.
