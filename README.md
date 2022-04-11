@@ -44,7 +44,7 @@ Como há um controle das matrículas já processadas no mês, o robô pode ser a
    Adriano Faria
 
 ## Licença
-   GNU
+   GNU General Public License v3.0 (GNU GPLv3)
 
 ## Conclusão
 Este robô tem um relevante papel no ganho de mão de obra em administradoras de imóveis, onde dezenas ou centenas de contas precisam ser gerenciadas e/ou solicitadas a companhia pessoalmente, todo mês, pelos mais diversos motivos. Utilize e seja feliz. ;)
