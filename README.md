@@ -24,7 +24,7 @@
 ## Como rodar a aplicação
    1. Cerfique-se de estar no diretório onde a aplicação foi descompactada
    2. Instale as dependências
-        pip install -r requirements.txt
+        ```pip install -r requirements.txt```
    3. Gere sua pŕopria chave criptográfica privada com o comando
         python agua.py --config_pk
    4. Configure o SMTP para envio dos PDFs por e-mail
