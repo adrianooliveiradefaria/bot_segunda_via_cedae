@@ -19,7 +19,7 @@
    - Editor de arquivos xlsx para alterar a planilha fonte de dados
    - Arquivo **AGUA.xlsx** com os dados de acesso dos clientes
    - [WebDriver](https://chromedriver.chromium.org/downloads) compatível com sua versão do Google Chrome
-   - WebDriver descompatado na raiz do diretório da aplicação e renomeado como chromedriver_linux
+   - WebDriver descompatado na raiz do diretório da aplicação e renomeado como chromedriver_linux ou chromedriver_win.exe (para Windows)
 
 ## Como rodar a aplicação
    1. Cerfique-se de estar no diretório onde a aplicação foi descompactada
