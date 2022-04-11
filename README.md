@@ -22,8 +22,6 @@
    - WebDriver descompatado na raiz do diretório da aplicação e renomeado como chromedriver_linux
 
 ## Como rodar a aplicação
-Faça isso:
-   <p>`python agua.py`</p>
    1. Cerfique-se de estar no diretório onde a aplicação foi descompactada
    2. Instale as dependências
       `pip install -r requirements.txt`
